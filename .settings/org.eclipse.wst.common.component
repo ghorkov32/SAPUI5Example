@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SAPUI5Example">
+        <wb-resource deploy-path="/" source-path="/www" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="SAPUI5Example"/>
+        <property name="java-output-path" value="/SAPUI5Example/build/classes"/>
+    </wb-module>
+</project-modules>
