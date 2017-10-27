@@ -1,10 +1,14 @@
-<mvc:View controllerName="SAPUI5ExampleSAPUI5Example.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+<mvc:View controllerName="SAPUI5ExampleSAPUI5Example.controller.Main" 
+xmlns:html="http://www.w3.org/1999/xhtml" 
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:core="sap.ui.core"
 	displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
 				<content>
 				   <Table
+				       id="table"			    
 				       headerText="{i18n>tableTitle}"
 				       items="{operators>/Operators}"
                        >
@@ -36,7 +40,7 @@
                            </Column>
                            
                        </columns>
-                         <ColumnListItem>
+                         <ColumnListItem >
                               <Text text="{operators>name}" />
                               <Text text="{operators>status}" />
                               <Text text="{operators>plant}" />
@@ -44,12 +48,37 @@
                               <Text text="{operators>email}" />
                          
                          </ColumnListItem>
-				      
-				
-				
 				   </Table>
 				
 				</content>
+				
+				<footer>
+				    <Bar>
+				      <contentRight>
+				           <Text text="{i18n>GroupTitleOrder}"></Text>
+					       <Select
+					          id="groupSelect"
+						      change="handleGroup"
+						      icon="sap-icon://sort-ascending"
+						      type="IconOnly"
+						      selectedKey="None"
+						      autoAdjustWidth="true" >
+						      <core:Item
+							    key="NoneKey"
+							    text="{i18n>GroupNone}"/>
+						     <core:Item 	
+						        key="NameKey"
+							    text="{i18n>GroupName}">
+						     </core:Item>
+						     <core:Item 	
+						        key="StatusKey"
+							    text="{i18n>GroupStatus}">
+						     </core:Item>
+											
+					       </Select>
+				     </contentRight>
+			        </Bar>
+			     </footer>
 			</Page>
 		</pages>
 	</App>
