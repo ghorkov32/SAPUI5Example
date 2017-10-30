@@ -1,4 +1,4 @@
-<mvc:View controllerName="SAPUI5ExampleSAPUI5Example.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+<mvc:View controllerName="SAPUI5ExampleSAPUI5Example.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
@@ -41,10 +41,10 @@
                               <Text text="{operators>name}" />
                               <Text text="{operators>status}" />
                               <Text text="{operators>plant}" />
-                           	  <core:Icon size="1.5rem" src="sap-icon://call"/>
-                           	  <core:Icon size="1.5rem" src="sap-icon://email"/>
+                           	  <core:Icon size="1.5rem" src="sap-icon://call" press="phoneBtnClick" app:phone="{operators>phone}"/>
+                           	  <core:Icon size="1.5rem" src="sap-icon://email" press="mailBtnClick" app:email="{operators>email}"/>
 							  
-                         
+                    
                          </ColumnListItem>
 				      
 				
