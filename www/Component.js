@@ -19,6 +19,9 @@ sap.ui.define([
 		init: function() {
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
+			
+			var newModel = new sap.ui.model.json.JSONModel("./model/Operators.json");
+			this.setModel(newModel, "operators");
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
