@@ -55,7 +55,7 @@ xmlns:core="sap.ui.core"
 				<footer>
 				    <Bar>
 				      <contentRight>
-				           <Text text="{i18n>GroupTitleOrder}"></Text>
+				           <Label text="{i18n>GroupTitleOrder}"></Label>
 					       <Select
 					          id="groupSelect"
 						      change="handleGroup"

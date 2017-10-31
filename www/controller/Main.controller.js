@@ -7,24 +7,33 @@ sap.ui.define([
 		
 		
 		
-		handleGroup : function (evt) {
+		handleGroup : function (oEvt) {
 
 			//  sorters
 			var sorters = [];
-			var item = evt.getParameter("selectedItem");
+			var item = oEvt.getParameter("selectedItem");
 			var key = (item) ? item.getKey() : null;
 			var list = this.getView().byId("table");
 			var oBinding = list.getBinding("items");
 			
-			if(key =="NameKey"){
+			switch (key){
+			
+			case "NameKey":
 				sorters.push(new sap.ui.model.Sorter("name", false, oBinding));
 				oBinding.sort(sorters);
-			}
-			else if(key =="StatusKey"){
+				break;
+			
+			case "StatusKey":
 				sorters.push(new sap.ui.model.Sorter("status", true, oBinding));
 				oBinding.sort(sorters);
-			}else {
+				break;
+				
+			case "NoneKey":
 				oBinding.sort();
+				break;
+				
+			default:
+				break;
 			}
 		
 				
