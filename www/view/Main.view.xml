@@ -4,7 +4,53 @@
 		<pages>
 			<Page title="{i18n>title}">
 				<content>
-					<SearchField width="90%" class="sapUiSmallMargin" />
+					
+				   <Table
+				       items="{operators>/Operators}"				       
+                       >
+                       <headerToolbar>
+						<Toolbar>
+							<Title text="{i18n>tableTitle}"/>
+							<ToolbarSpacer/>
+							<SearchField width="50%" search="onSearch"/>
+						</Toolbar>
+					</headerToolbar> 
+                       <columns>
+                           <Column mergeDuplicates="true">
+                             <header>
+                             	<SearchField width="90%" class="sapUiSmallMargin" />
+                                <Text text="{i18n>tableColumnName}"/>
+                              </header>
+                           </Column>
+                           <Column mergeDuplicates="true">
+                             <header>
+                                <Text text="{i18n>tableColumnStatus}"/>
+                              </header>
+                           </Column>
+                           <Column mergeDuplicates="true">
+                             <header>
+                                <Text text="{i18n>tableColumnPlant}"/>
+                              </header>
+                           </Column>
+                           <Column mergeDuplicates="true">
+                             <header>
+                                <Text text="{i18n>tableColumnPhone}"/>
+                              </header>
+                           </Column>
+                            <Column mergeDuplicates="true">
+                             <header>
+                                <Text text="{i18n>tableColumnEmail}"/>
+                              </header>
+                           </Column>    
+                       </columns>
+                         <ColumnListItem>
+                              <Text text="{operators>name}" />
+                              <Text text="{operators>status}" />
+                              <Text text="{operators>plant}" />
+                              <Text text="{operators>phone}" />
+                              <Text text="{operators>email}" />       
+                         </ColumnListItem>
+				   </Table>
 				</content>
 			</Page>
 		</pages>
