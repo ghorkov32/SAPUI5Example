@@ -1,1 +1,9 @@
-/* Enter your custom styles here */
+.rowColorOnDuty{
+    background-color: red !important;
+} 
+.rowColorOffwork{
+    background-color: blue !important;
+} 
+.rowColorLeaveofabsence{
+    background-color: green !important;
+} 
