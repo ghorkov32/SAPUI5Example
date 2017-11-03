@@ -10,8 +10,14 @@ displayBlock="true" xmlns="sap.m">
 				<content>
 					<Table
 						id="table"
-						headerText="{i18n>tableTitle}"
 						items="{operators>/Operators}">
+						<headerToolbar>
+							<Toolbar>
+								<Title text="{i18n>tableTitle}"/>
+								<ToolbarSpacer/>
+								<SearchField width="50%" search="onSearch"/>
+							</Toolbar>
+						</headerToolbar>
 					<columns>
 						<Column mergeDuplicates="true">
 							<header>
