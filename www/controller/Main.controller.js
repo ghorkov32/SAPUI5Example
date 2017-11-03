@@ -4,7 +4,7 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("SAPUI5ExampleSAPUI5Example.controller.Main", {
-			
+
 		handleGroup : function (oEvt) {
 
 			//  sorters

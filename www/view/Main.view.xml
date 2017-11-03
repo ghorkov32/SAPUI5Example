@@ -70,7 +70,6 @@ displayBlock="true" xmlns="sap.m">
 									key="StatusKey"
 									text="{i18n>GroupStatus}">
 							</core:Item>
-
 						</Select>
 					</contentRight>
 				</Bar>
