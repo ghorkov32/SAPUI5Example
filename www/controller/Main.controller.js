@@ -34,8 +34,7 @@ sap.ui.define([
 				break;
 			}
 		},
-                           
-		
+
 		mailBtnClick: function(oEvt){
 			var sEmail = oEvt.getSource().getCustomData()[0].getValue();
 			sap.m.URLHelper.triggerEmail(sEmail, "Subject", "Hi"); 
