@@ -1,9 +1,13 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
+	"sap/ui/core/mvc/Controller",
+	"SAPUI5ExampleSAPUI5Example/util/Formatter"
+	
+], function(Controller, Formatter) {
 	"use strict";
 
 	return Controller.extend("SAPUI5ExampleSAPUI5Example.controller.Main", {
+		
+		formatter:Formatter,
 
 		handleGroup : function (oEvt) {
 

@@ -48,7 +48,7 @@ displayBlock="true" xmlns="sap.m">
 					<ColumnListItem>
 						<Text text="{operators>name}"/>
 						<Text text="{operators>status}"/>
-						<Text text="{operators>plant}"/>
+						<Text text="{parts: [{path: 'operators>plant'}, {path: 'oPlantModel'}], formatter: 'SAPUI5ExampleSAPUI5Example.util.Formatter.formatterFunction'}"/>
 						<core:Icon size="1.5rem" src="sap-icon://call" press="phoneBtnClick" app:phone="{operators>phone}"/>
 						<core:Icon size="1.5rem" src="sap-icon://email" press="mailBtnClick" app:email="{operators>email}"/>
 					</ColumnListItem>

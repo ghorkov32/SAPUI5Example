@@ -22,6 +22,11 @@ sap.ui.define([
 			
 			var newModel = new sap.ui.model.json.JSONModel("./model/Operators.json");
 			this.setModel(newModel, "operators");
+			
+			var oPlantInfoModel = new sap.ui.model.json.JSONModel("./model/PlantInformation.json");
+			this.setModel(oPlantInfoModel, "oPlantModel");
+			
+		
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
