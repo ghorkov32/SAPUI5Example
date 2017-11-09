@@ -4,9 +4,19 @@ xmlns:mvc="sap.ui.core.mvc"
 xmlns:core="sap.ui.core"
 xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 displayBlock="true" xmlns="sap.m">
+
 	<App>
+	
 		<pages>
-			<Page title="{i18n>title}">
+		
+			<Page title="{i18n>title}" showNavButton="false">
+			
+			
+			    <headerContent>
+		            <Button icon="sap-icon://menu2" />
+		        </headerContent>
+	
+				
 				<content>
 					<Table
 						id="table"
