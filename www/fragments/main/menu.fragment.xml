@@ -1,0 +1,5 @@
+<VBox xmlns="sap.m">
+		<Label text="My Label inside an XML fragment"/>
+		<Button text="Hello World"/>
+		<Button text="{/someText}"/>
+	</VBox>
