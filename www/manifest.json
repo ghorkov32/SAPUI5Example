@@ -42,6 +42,30 @@
 			"viewName": "SAPUI5ExampleSAPUI5Example.view.Main",
 			"type": "XML"
 		},
+		 "routing": {
+			
+			"routes": [
+				{
+				    "routerClass": "SAPUI5ExampleSAPUI5Example.Router",
+					"name": "Main",
+					"pattern": "",
+					"target": [
+						"Main"
+					]
+				}
+			],
+			"targets": {
+				"Main": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "Main",
+					"viewLevel": 0,
+					"controlAggregation": "pages",
+					"controlId": "app",
+					"viewPath": "SAPUI5ExampleSAPUI5Example.view"
+				}
+			}
+		},
 		"dependencies": {
 			"minUI5Version": "1.30.0",
 			"libs": {

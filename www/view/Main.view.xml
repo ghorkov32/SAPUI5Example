@@ -13,7 +13,7 @@ displayBlock="true" xmlns="sap.m">
 			
 			
 			    <headerContent>
-		            <Button icon="sap-icon://menu2" />
+		            <Button icon="sap-icon://menu2"  press="handlePressOpenMenu"/>
 		        </headerContent>
 	
 				
