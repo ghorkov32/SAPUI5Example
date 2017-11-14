@@ -43,7 +43,38 @@ sap.ui.define([
 		phoneBtnClick: function(oEvt){
 			var sPhone = oEvt.getSource().getCustomData()[0].getValue();
 			sap.m.URLHelper.triggerTel(sPhone); 
-		}
+		},
+		
+		handlePressOpenMenu: function(oEvent) {//Open menu *Laborde Natalia
+			var oButton = oEvent.getSource();
+
+			
+			if (!this._menu) {
+				this._menu = sap.ui.xmlfragment(
+					"SAPUI5ExampleSAPUI5Example.fragment.Menu",
+					this
+				);
+				this.getView().addDependent(this._menu);
+			}
+
+			var eDock = sap.ui.core.Popup.Dock;
+			this._menu.open(this._bKeyboard, oButton, eDock.BeginTop, eDock.BeginBottom, oButton);
+		},
+		
+		handleMenuItemPress: function(oEvent) {//Menu navigation *Laborde Natalia
+			
+			var oItem =oEvent.getParameter("item").getText();
+			
+			switch (oItem){
+			
+			case "Operators List":
+				var onRootPage = sap.ui.core.UIComponent.getRouterFor(this);
+				onRootPage.navTo("Main");
+				break;
+			     			
+			}
+			
+		},
 		
 		
 	});
