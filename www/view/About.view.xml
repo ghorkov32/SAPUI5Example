@@ -1,0 +1,41 @@
+<mvc:View controllerName="SAPUI5ExampleSAPUI5Example.controller.About"
+xmlns:html="http://www.w3.org/1999/xhtml"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:core="sap.ui.core"
+xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>aboutTitle}">
+				<content>
+				</content>
+<!-- 			<footer>
+				<Bar>
+					<contentRight>
+						<Label text="{i18n>GroupTitleOrder}"></Label>
+						<Select
+								id="groupSelect"
+								change="handleGroup"
+								icon="sap-icon://sort-ascending"
+								type="IconOnly"
+								selectedKey="None"
+								autoAdjustWidth="true" >
+							<core:Item
+									key="NoneKey"
+									text="{i18n>GroupNone}"/>
+							<core:Item
+									key="NameKey"
+									text="{i18n>GroupName}">
+							</core:Item>
+							<core:Item
+									key="StatusKey"
+									text="{i18n>GroupStatus}">
+							</core:Item>
+						</Select>
+					</contentRight>
+				</Bar>
+			</footer> --> 
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
