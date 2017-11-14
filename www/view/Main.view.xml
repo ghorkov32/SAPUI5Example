@@ -80,6 +80,9 @@ displayBlock="true" xmlns="sap.m">
 					</contentRight>
 				</Bar>
 			</footer>
+			<headerContent>
+			    <core:Icon size="1.5rem" src="sap-icon://menu2"/>
+			</headerContent>
 			</Page>
 		</pages>
 	</App>
