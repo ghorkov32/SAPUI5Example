@@ -3,11 +3,31 @@ xmlns:html="http://www.w3.org/1999/xhtml"
 xmlns:mvc="sap.ui.core.mvc"
 xmlns:core="sap.ui.core"
 xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
-displayBlock="true" xmlns="sap.m">
+displayBlock="true" xmlns="sap.m"
+xmlns:table="sap.ui.table">
 	<App>
 		<pages>
 			<Page title="{i18n>plantsTitle}" showNavButton="true" navButtonPress="onNavBack">
 				<content>
+					<table:Table id="oTable" rows="{oPlantInfo>/Plants}">
+						<table:title>
+							<Text text="SAPUI5 sap.ui.table XML view"></Text>
+						</table:title>
+						<table:columns>
+							<table:Column sortProperty="name" filterProperty="name">
+								<Label text="{i18n>tableColumnPlantName}"/>
+								<table:template>
+									<Text text="{oPlantInfo>name}" ></Text>
+								</table:template>
+							</table:Column>
+							<table:Column sortProperty="company" filterProperty="company">
+								<Label text="{i18n>tableColumnPlantCode}"/>
+								<table:template>
+									<Text text="{oPlantInfo>plantCode}" ></Text>
+								</table:template>
+							</table:Column>				
+						</table:columns>
+					</table:Table>
 				</content>
 <!-- 			<footer>
 				<Bar>
