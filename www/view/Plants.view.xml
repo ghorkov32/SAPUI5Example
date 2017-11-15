@@ -6,7 +6,7 @@ xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
-			<Page title="{i18n>plantsTitle}">
+			<Page title="{i18n>plantsTitle}" showNavButton="true" navButtonPress="onNavBack">
 				<content>
 				</content>
 <!-- 			<footer>
