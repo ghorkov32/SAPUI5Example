@@ -12,6 +12,16 @@
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
+		},
+		"dataSources": {
+			"operators_alias": {
+				"uri": "model/Operators.json",
+				"type": "JSON"
+			},
+			"plants_alias": {
+				"uri": "model/PlantInformation.json",
+				"type": "JSON"
+			}
 		}
 	},
 
@@ -99,6 +109,14 @@
 				"settings": {
 					"bundleName": "SAPUI5ExampleSAPUI5Example.i18n.i18n"
 				}
+			},
+			"oPlantInfo": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "plants_alias"
+			},
+			"operators": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "operators_alias"
 			}
 		},
 		"resources": {

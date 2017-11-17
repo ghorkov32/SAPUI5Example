@@ -5,6 +5,16 @@ sap.ui.define([
 
 	return Controller.extend("SAPUI5ExampleSAPUI5Example.controller.Main", {
 
+		onInit: function () {
+			var oOperatorsModel = this.getOwnerComponent().getModel("operators");
+			oOperatorsModel.attachRequestCompleted(
+				function () {
+					//Hagan su magia
+                }
+			)
+        },
+
+
 		handleGroup : function (oEvt) {
 
 			//  sorters

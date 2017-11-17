@@ -5,7 +5,18 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("SAPUI5ExampleSAPUI5Example.controller.Plants", {
-		
+
+		formatter:formatter,
+
+        onInit: function() {
+            var oOperatorsModel = this.getOwnerComponent().getModel("oPlantInfo");
+            oOperatorsModel.attachRequestCompleted(
+                function () {
+                    //Hagan su magia
+                }
+            )
+        },
+
 		onNavBack: function () {
 			var oHistory, sPreviousHash;
 
