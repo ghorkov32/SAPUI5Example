@@ -67,6 +67,10 @@ sap.ui.define([
 			
 			switch (oItem){
 			
+			case "Plants List":
+				var onRootPage = sap.ui.core.UIComponent.getRouterFor(this);
+				onRootPage.navTo("Plants");
+				break;
 			case "Operators List":
 				var onRootPage = sap.ui.core.UIComponent.getRouterFor(this);
 				onRootPage.navTo("Main");

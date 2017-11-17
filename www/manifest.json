@@ -42,27 +42,38 @@
 			"viewName": "SAPUI5ExampleSAPUI5Example.view.Main",
 			"type": "XML"
 		},
-		 "routing": {
-			
+		"routing": {
+	        "config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "SAPUI5ExampleSAPUI5Example.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+		     },
 			"routes": [
+			
 				{
-				    "routerClass": "SAPUI5ExampleSAPUI5Example.Router",
-					"name": "Main",
+				    "name": "Main",
 					"pattern": "",
-					"target": [
-						"Main"
-					]
+					"target":"Main"				
+				},
+				{
+				    
+					"name": "Plants",
+					"pattern": "Main",
+					"target": "Plants"
+				
 				}
 			],
 			"targets": {
 				"Main": {
 					"viewType": "XML",
 					"transition": "slide",
-					"viewName": "Main",
-					"viewLevel": 0,
-					"controlAggregation": "pages",
-					"controlId": "app",
-					"viewPath": "SAPUI5ExampleSAPUI5Example.view"
+					"viewName": "Main"			
+				},
+				"Plants": {
+					"viewType": "XML",
+					"transition": "slide",
+					"viewName": "Plants"				
 				}
 			}
 		},
