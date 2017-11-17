@@ -1,10 +1,13 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/ui/core/routing/History"
-], function(Controller, History) {
+	"sap/ui/core/routing/History",
+	"SAPUI5ExampleSAPUI5Example/util/formatter"
+], function(Controller, History, formatter) {
 	"use strict";
 
 	return Controller.extend("SAPUI5ExampleSAPUI5Example.controller.Plants", {
+
+		formatter:formatter,
 		
 		onNavBack: function () {
 			var oHistory, sPreviousHash;
