@@ -1,6 +1,7 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
+	"sap/ui/core/mvc/Controller",
+    "sap/ui/model/Filter"
+], function(Controller, Filter) {
 	"use strict";
 
 	return Controller.extend("SAPUI5ExampleSAPUI5Example.controller.Main", {
@@ -89,7 +90,23 @@ sap.ui.define([
 			}
 			
 		},
-		
-		
-	});
+        onSearch: function(oEvent) {
+            var filters = [];
+
+            var query = oEvent.getParameter("newValue");
+
+            if (query && query.length > 0) {
+                var filter = new sap.ui.model.Filter("name",  sap.ui.model.FilterOperator.StartsWith, query);
+                filters.push(filter);
+            }
+
+            // update list binding
+            var list = this.getView().byId("table");
+            var binding = list.getBinding("items");
+            binding.filter(filters);
+        }
+
+
+
+    });
 });

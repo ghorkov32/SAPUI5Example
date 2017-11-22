@@ -10,6 +10,7 @@ sap.ui.define([
         onInit: function() {
 
         },
+
 		onNavBack: function () {
 			var oHistory, sPreviousHash;
 
