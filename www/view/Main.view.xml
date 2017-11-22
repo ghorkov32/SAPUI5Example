@@ -25,7 +25,7 @@ displayBlock="true" xmlns="sap.m">
 							<Toolbar>
 								<Title text="{i18n>tableTitle}"/>
 								<ToolbarSpacer/>
-								<SearchField width="50%" search="onSearch"/>
+								<SearchField width="50%" liveChange="onSearch" />
 							</Toolbar>
 						</headerToolbar>
 					<columns>
