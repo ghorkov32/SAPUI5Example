@@ -25,7 +25,14 @@ xmlns:table="sap.ui.table">
 								<table:template>
 									<Text text="{oPlantInfo>plantCode}" ></Text>
 								</table:template>
-							</table:Column>				
+							</table:Column>
+							<table:Column sortProperty="company" filterProperty="company">
+								<Label text="{i18n>tableColumnPlantCode}"/>
+								<table:template>
+									<Text text="{oPlantInfo>operatorsNumber}" ></Text>
+								</table:template>
+							</table:Column>
+
 						</table:columns>
 					</table:Table>
 				</content>
